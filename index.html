@@ -1,139 +1,82 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="簡明說話" />
-  <title>簡明說話｜Speak Clear</title>
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="icon.svg" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f172a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="簡明說話" />
+<title>簡明說話｜Speak Clear</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icon.svg" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="badge">Speak Clear</div>
-    <h1>講話變簡明</h1>
-    <p>Choose a language and practice one clear structure at a time.</p>
-  </header>
+<header class="hero"><div class="badge">Speak Clear</div><h1>講話變簡明</h1><p>Choose a language and practice one clear structure at a time.</p></header>
+<nav class="tabs" aria-label="Main tabs"><button class="tab-btn active" data-tab="zh">中文</button><button class="tab-btn" data-tab="en">English</button><button class="tab-btn" data-tab="phrases">實用語句</button></nav>
+<main>
+<section id="tab-zh" class="tab-panel active">
+<section class="card accent"><h2>唯一先記這個</h2><div class="formula">結論 → 理由 → 例子／下一步</div><p class="example"><strong>我建議先延後。</strong> 因為目前資料還沒確認完整。例如，昨天檢查時發現兩個數字不一致。</p></section>
+<section class="card"><h2>我的 5 秒發言框架</h2><div class="steps"><div><span>1</span><b>先講結論</b><small>第一句就回答問題。</small></div><div><span>2</span><b>再講理由</b><small>最多 1–2 個理由。</small></div><div><span>3</span><b>最後補例子或下一步</b><small>只有需要時才補。</small></div></div></section>
+<section class="card"><h2>刪掉這 4 種話</h2><ul class="checklist"><li>同一件事換句話再說一次</li><li>還沒講結論，就先交代太多背景</li><li>與決策無關的細節</li><li>「就是、然後、那個、其實、可能」過多</li></ul></section>
+<section class="card"><h2>三種常用模板</h2><details open><summary>工作回報</summary><p><b>結論：</b>目前進度正常／目前有一個問題。<br><b>原因：</b>主要是……<br><b>下一步：</b>我會在……前完成。</p></details><details><summary>表達意見</summary><p><b>我的建議是：</b>……<br><b>因為：</b>第一……第二……<br><b>所以：</b>我建議接下來……</p></details><details><summary>回答問題</summary><p><b>先回答：</b>是／不是／我建議……<br><b>再補充：</b>主要有 1–2 個原因。<br><b>例子：</b>例如……</p></details></section>
+<section class="card"><h2>60 秒練習</h2><p id="prompt-zh">題目：今天你最重要的一件事是什麼？</p><textarea id="practice-zh" placeholder="先寫一句結論，再寫 1–2 句理由。"></textarea><div class="counter"><span id="charCount-zh">0</span> 字</div><div class="actions"><button id="newPrompt-zh">換題目</button><button id="clearBtn-zh">清空</button></div></section>
+<section class="card"><h2>發言前檢核</h2><label><input type="checkbox"> 第一秒就聽得到我的結論</label><label><input type="checkbox"> 理由不超過 2 個</label><label><input type="checkbox"> 沒有無關背景</label><label><input type="checkbox"> 能在 30 秒內說完</label><label><input type="checkbox"> 對方知道下一步是什麼</label></section>
+<section class="card"><h2>最重要的習慣</h2><p class="bigline">先說 70%，停下來。</p><p>如果對方需要更多，他會問。</p></section>
+</section>
 
-  <nav class="tabs" aria-label="Main tabs">
-    <button class="tab-btn active" data-tab="zh">中文</button>
-    <button class="tab-btn" data-tab="en">English</button>
-    <button class="tab-btn" data-tab="phrases">實用語句</button>
-  </nav>
+<section id="tab-en" class="tab-panel">
+<section class="card accent"><h2>One rule</h2><div class="formula">Answer → Reason → Example / Next step</div><p class="example"><strong>I suggest we delay it.</strong> The data is not fully confirmed. For example, two numbers did not match yesterday.</p></section>
+<section class="card"><h2>5-second framework</h2><div class="steps"><div><span>1</span><b>Answer first</b><small>Give the main answer in one sentence.</small></div><div><span>2</span><b>Give the reason</b><small>Give only 1–2 reasons.</small></div><div><span>3</span><b>Add a next step</b><small>Only add details when needed.</small></div></div></section>
+<section class="card"><h2>4 rules for clear English</h2><ul class="checklist"><li><b>Short sentence.</b> One idea in one sentence.</li><li><b>Simple words.</b> Use words you already know.</li><li><b>Answer first.</b> Do not start with a long background.</li><li><b>Stop early.</b> Stop after the main point.</li></ul></section>
+<section class="card"><h2>Useful English</h2><details open><summary>Answer first</summary><p><b>My answer is yes.</b><br><b>I think we should...</b><br><b>My suggestion is...</b><br><b>The main issue is...</b></p></details><details><summary>Give a reason</summary><p><b>The main reason is...</b><br><b>There are two reasons.</b><br><b>First,... Second,...</b><br><b>This is because...</b></p></details><details><summary>Next step</summary><p><b>So, I suggest...</b><br><b>The next step is...</b><br><b>I will finish it by...</b><br><b>We can check it again tomorrow.</b></p></details></section>
+<section class="card"><h2>3 speaking templates</h2><details open><summary>Work update</summary><p>The progress is on track. / We have one issue.<br>The main reason is...<br>My next step is...</p></details><details><summary>Give an opinion</summary><p>My suggestion is...<br>The main reason is...<br>So, I think we should...</p></details><details><summary>Answer a question</summary><p>Yes. / No. / I suggest...<br>There are two reasons.<br>First,... Second,...</p></details></section>
+<section class="card"><h2>Avoid this</h2><p><b>Too long:</b><br>Actually, I think maybe there are several things we need to consider, and yesterday I also checked some information, so maybe we can...</p><p><b>Better:</b><br><strong>I suggest we wait one day.</strong> We still need to confirm the data.</p></section>
+<section class="card"><h2>60-second practice</h2><p id="prompt-en">Prompt: What is the most important thing you need to do today?</p><textarea id="practice-en" placeholder="Write one clear answer, then 1–2 short reasons."></textarea><div class="counter"><span id="charCount-en">0</span> characters</div><div class="actions"><button id="newPrompt-en">New prompt</button><button id="clearBtn-en">Clear</button></div></section>
+<section class="card"><h2>Before I speak</h2><label><input type="checkbox"> I answer in the first sentence.</label><label><input type="checkbox"> I give only 1–2 reasons.</label><label><input type="checkbox"> I do not start with a long background.</label><label><input type="checkbox"> My sentences are short.</label><label><input type="checkbox"> I stop after the main point.</label></section>
+<section class="card"><h2>Best habit</h2><p class="bigline">Say 70%. Then stop.</p><p>If they need more detail, they will ask.</p></section>
+</section>
 
-  <main>
-    <section id="tab-zh" class="tab-panel active">
-      <section class="card accent">
-        <h2>唯一先記這個</h2>
-        <div class="formula">結論 → 理由 → 例子／下一步</div>
-        <p class="example"><strong>我建議先延後。</strong> 因為目前資料還沒確認完整。例如，昨天檢查時發現兩個數字不一致。</p>
-      </section>
-      <section class="card"><h2>我的 5 秒發言框架</h2><div class="steps"><div><span>1</span><b>先講結論</b><small>第一句就回答問題。</small></div><div><span>2</span><b>再講理由</b><small>最多 1–2 個理由。</small></div><div><span>3</span><b>最後補例子或下一步</b><small>只有需要時才補。</small></div></div></section>
-      <section class="card"><h2>刪掉這 4 種話</h2><ul class="checklist"><li>同一件事換句話再說一次</li><li>還沒講結論，就先交代太多背景</li><li>與決策無關的細節</li><li>「就是、然後、那個、其實、可能」過多</li></ul></section>
-      <section class="card"><h2>三種常用模板</h2><details open><summary>工作回報</summary><p><b>結論：</b>目前進度正常／目前有一個問題。<br><b>原因：</b>主要是……<br><b>下一步：</b>我會在……前完成。</p></details><details><summary>表達意見</summary><p><b>我的建議是：</b>……<br><b>因為：</b>第一……第二……<br><b>所以：</b>我建議接下來……</p></details><details><summary>回答問題</summary><p><b>先回答：</b>是／不是／我建議……<br><b>再補充：</b>主要有 1–2 個原因。<br><b>例子：</b>例如……</p></details></section>
-      <section class="card"><h2>60 秒練習</h2><p id="prompt-zh">題目：今天你最重要的一件事是什麼？</p><textarea id="practice-zh" placeholder="先寫一句結論，再寫 1–2 句理由。"></textarea><div class="counter"><span id="charCount-zh">0</span> 字</div><div class="actions"><button id="newPrompt-zh">換題目</button><button id="clearBtn-zh">清空</button></div></section>
-      <section class="card"><h2>發言前檢核</h2><label><input type="checkbox"> 第一秒就聽得到我的結論</label><label><input type="checkbox"> 理由不超過 2 個</label><label><input type="checkbox"> 沒有無關背景</label><label><input type="checkbox"> 能在 30 秒內說完</label><label><input type="checkbox"> 對方知道下一步是什麼</label></section>
-      <section class="card"><h2>最重要的習慣</h2><p class="bigline">先說 70%，停下來。</p><p>如果對方需要更多，他會問。</p></section>
-    </section>
+<section id="tab-phrases" class="tab-panel">
+<section class="card accent"><h2>實用語句｜Useful Phrases</h2><p>每一組都有：使用情境、建議句、示範，以及你自己的可編輯版本。修改後會自動儲存在這台裝置。</p></section>
 
-    <section id="tab-en" class="tab-panel">
-      <section class="card accent"><h2>One rule</h2><div class="formula">Answer → Reason → Example / Next step</div><p class="example"><strong>I suggest we delay it.</strong> The data is not fully confirmed. For example, two numbers did not match yesterday.</p></section>
-      <section class="card"><h2>5-second framework</h2><div class="steps"><div><span>1</span><b>Answer first</b><small>Give the main answer in one sentence.</small></div><div><span>2</span><b>Give the reason</b><small>Give only 1–2 reasons.</small></div><div><span>3</span><b>Add a next step</b><small>Only add details when needed.</small></div></div></section>
-      <section class="card"><h2>4 rules for clear English</h2><ul class="checklist"><li><b>Short sentence.</b> One idea in one sentence.</li><li><b>Simple words.</b> Use words you already know.</li><li><b>Answer first.</b> Do not start with a long background.</li><li><b>Stop early.</b> Stop after the main point.</li></ul></section>
-      <section class="card"><h2>Useful English</h2><details open><summary>Answer first</summary><p><b>My answer is yes.</b><br><b>I think we should...</b><br><b>My suggestion is...</b><br><b>The main issue is...</b></p></details><details><summary>Give a reason</summary><p><b>The main reason is...</b><br><b>There are two reasons.</b><br><b>First,... Second,...</b><br><b>This is because...</b></p></details><details><summary>Next step</summary><p><b>So, I suggest...</b><br><b>The next step is...</b><br><b>I will finish it by...</b><br><b>We can check it again tomorrow.</b></p></details></section>
-      <section class="card"><h2>3 speaking templates</h2><details open><summary>Work update</summary><p>The progress is on track. / We have one issue.<br>The main reason is...<br>My next step is...</p></details><details><summary>Give an opinion</summary><p>My suggestion is...<br>The main reason is...<br>So, I think we should...</p></details><details><summary>Answer a question</summary><p>Yes. / No. / I suggest...<br>There are two reasons.<br>First,... Second,...</p></details></section>
-      <section class="card"><h2>Avoid this</h2><p><b>Too long:</b><br>Actually, I think maybe there are several things we need to consider, and yesterday I also checked some information, so maybe we can...</p><p><b>Better:</b><br><strong>I suggest we wait one day.</strong> We still need to confirm the data.</p></section>
-      <section class="card"><h2>60-second practice</h2><p id="prompt-en">Prompt: What is the most important thing you need to do today?</p><textarea id="practice-en" placeholder="Write one clear answer, then 1–2 short reasons."></textarea><div class="counter"><span id="charCount-en">0</span> characters</div><div class="actions"><button id="newPrompt-en">New prompt</button><button id="clearBtn-en">Clear</button></div></section>
-      <section class="card"><h2>Before I speak</h2><label><input type="checkbox"> I answer in the first sentence.</label><label><input type="checkbox"> I give only 1–2 reasons.</label><label><input type="checkbox"> I do not start with a long background.</label><label><input type="checkbox"> My sentences are short.</label><label><input type="checkbox"> I stop after the main point.</label></section>
-      <section class="card"><h2>Best habit</h2><p class="bigline">Say 70%. Then stop.</p><p>If they need more detail, they will ask.</p></section>
-    </section>
+<section class="card"><h2>不同對象，要用不同的簡明方式</h2><p>不是每個人都要用「工作報告」的說法。重點是依對象調整：</p><ul class="checklist"><li><b>朋友：</b>先講感受，再講 1–2 個亮點。</li><li><b>主管：</b>先講結果，再講風險與下一步。</li><li><b>同事：</b>先講現在需要對方知道或做什麼。</li><li><b>教授／老師：</b>先講你的問題或進度，再講你希望得到什麼建議。</li><li><b>家人：</b>先講結果，再講讓對方安心的重點。</li><li><b>陌生人：</b>先講目的，再講必要資訊。</li></ul></section>
 
-    <section id="tab-phrases" class="tab-panel">
-      <section class="card accent">
-        <h2>實用語句｜Useful Phrases</h2>
-        <p>每一組都有：使用情境、建議句、示範，以及你自己的可編輯版本。修改後會自動儲存在這台裝置。</p>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">朋友｜旅遊心得</div><h3>分享旅遊，不要從第一天早上開始講</h3><p><b>結構：</b>一句總評 → 兩個亮點 → 一個建議</p><div class="usage"><b>太長：</b>我那天先從飯店出來，然後坐地鐵去那邊，結果人超多，後來又去另一個地方……</div><p class="example-box"><b>簡明版：</b>這次釜山我覺得很值得去。最喜歡的是海雲台和智慧城市展，城市很舒服、交通也方便。如果你去，我會建議住 BEXCO 附近，移動最省時間。</p><p><b>English:</b> Busan was definitely worth the trip. My two highlights were Haeundae and the smart city expo. If you go, I recommend staying near BEXCO.</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="friend-travel">這次旅行我覺得……。最喜歡的是……和……。如果你要去，我最推薦……。</textarea></section>
 
-      <section class="phrase-card">
-        <div class="phrase-tag">工作回報</div>
-        <h3>先講目前狀況</h3>
-        <p><b>建議句：</b>目前進度正常，但有一個問題需要注意。</p>
-        <p><b>English:</b> The progress is on track, but there is one issue we need to watch.</p>
-        <div class="usage"><b>怎麼用：</b>主管問「現在進度如何？」時，先講狀況，再補原因。</div>
-        <p class="example-box"><b>例子：</b>目前進度正常，但供應商回覆比預期慢一天。我今天會再確認一次。</p>
-        <label class="edit-label">我的版本</label>
-        <textarea class="editable-phrase" data-key="work-update">目前進度正常，但有一個問題需要注意。主要原因是……下一步我會……</textarea>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">朋友｜最近在忙什麼</div><h3>不要把整個近況全部交代</h3><p><b>結構：</b>最近主軸 → 一件代表性事情 → 感受</p><p class="example-box"><b>簡明版：</b>我最近主要在準備去日本念書，也在整理自己的研究方向。事情很多，但我覺得滿期待的。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="friend-update">我最近主要在……。其中最重要的是……。目前感覺……。</textarea></section>
 
-      <section class="phrase-card">
-        <div class="phrase-tag">表達建議</div>
-        <h3>先講建議，不先講背景</h3>
-        <p><b>建議句：</b>我的建議是先做 A，再做 B。</p>
-        <p><b>English:</b> My suggestion is to do A first, then B.</p>
-        <div class="usage"><b>怎麼用：</b>會議中被問意見時，先把你的主張講出來。</div>
-        <p class="example-box"><b>例子：</b>我的建議是先確認人力，再調整時程，因為目前最大的限制是人力。</p>
-        <label class="edit-label">我的版本</label>
-        <textarea class="editable-phrase" data-key="suggestion">我的建議是……因為……所以我建議接下來……</textarea>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">主管｜工作回報</div><h3>主管要的是結果，不是過程流水帳</h3><p><b>結構：</b>結果 → 問題／風險 → 下一步</p><div class="usage"><b>太長：</b>昨天我先打電話，後來對方沒有接，然後下午又再聯絡一次……</div><p class="example-box"><b>簡明版：</b>目前聯繫還沒完成，主要卡在對方尚未回覆。我今天下午會再聯絡一次，若仍無回應就改用書面通知。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="boss-update">目前……。主要問題是……。下一步我會……。</textarea></section>
 
-      <section class="phrase-card">
-        <div class="phrase-tag">不同意</div>
-        <h3>簡短表達不同意</h3>
-        <p><b>建議句：</b>我理解這個想法，但我不建議現在執行。</p>
-        <p><b>English:</b> I understand the idea, but I do not recommend doing it now.</p>
-        <div class="usage"><b>怎麼用：</b>不要先講一大段道歉或鋪陳，先說你同不同意，再解釋一個核心理由。</div>
-        <p class="example-box"><b>例子：</b>我理解這個想法，但我不建議現在執行，因為目前資料還不完整。</p>
-        <label class="edit-label">我的版本</label>
-        <textarea class="editable-phrase" data-key="disagree">我理解……，但我不建議……，因為……</textarea>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">主管｜提出建議</div><h3>先講你要什麼，再講理由</h3><p><b>結構：</b>建議 → 核心理由 → 執行方式</p><p class="example-box"><b>簡明版：</b>我建議這次先調整人力，不要先改時程。因為現在最大的限制是現場人力不足。我可以先重新排班，再看是否還需要延後。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="boss-suggestion">我建議……。主要原因是……。如果同意，我會先……。</textarea></section>
 
-      <section class="phrase-card">
-        <div class="phrase-tag">需要時間</div>
-        <h3>還不知道答案時</h3>
-        <p><b>建議句：</b>我現在還不能確認，我會先查清楚再回覆。</p>
-        <p><b>English:</b> I cannot confirm it yet. I will check and get back to you.</p>
-        <div class="usage"><b>怎麼用：</b>比起邊想邊講很多不確定資訊，直接說現在不知道，再講下一步。</div>
-        <p class="example-box"><b>例子：</b>我現在還不能確認這個數字。我下午三點前查清楚再回覆。</p>
-        <label class="edit-label">我的版本</label>
-        <textarea class="editable-phrase" data-key="need-time">我現在還不能確認……，我會在……前查清楚再回覆。</textarea>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">同事｜請人幫忙</div><h3>不要先解釋一大串背景</h3><p><b>結構：</b>需要什麼 → 為什麼 → 何時前</p><p class="example-box"><b>簡明版：</b>可以請你幫我確認這份名單嗎？因為下午要送出去，如果可以的話，中午前回我就好。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="coworker-help">可以請你幫我……嗎？因為……。如果可以，希望在……前完成。</textarea></section>
 
-      <section class="phrase-card">
-        <div class="phrase-tag">請對方說重點</div>
-        <h3>資訊太多時</h3>
-        <p><b>建議句：</b>我先確認一下，現在最重要的問題是什麼？</p>
-        <p><b>English:</b> Let me confirm: what is the main issue right now?</p>
-        <div class="usage"><b>怎麼用：</b>對方講很多資訊時，主動把討論拉回主題。</div>
-        <p class="example-box"><b>例子：</b>我先確認一下，現在最重要的是人力不足，還是時程延誤？</p>
-        <label class="edit-label">我的版本</label>
-        <textarea class="editable-phrase" data-key="clarify">我先確認一下，現在最重要的問題是……？</textarea>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">教授／老師｜研究進度</div><h3>先講現在做到哪，不要從研究背景重講</h3><p><b>結構：</b>目前進度 → 卡點 → 想請教的問題</p><p class="example-box"><b>簡明版：</b>目前模型已經跑完第一版，主要問題是軌跡雜訊還偏高。我想請教老師，下一步應該先調追蹤參數，還是先處理資料清理？</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="professor-research">目前我已經……。現在主要卡在……。我想請教您……？</textarea></section>
 
-      <section class="phrase-card">
-        <div class="phrase-tag">結束發言</div>
-        <h3>講完就停</h3>
-        <p><b>建議句：</b>以上是我目前的建議。</p>
-        <p><b>English:</b> That is my recommendation for now.</p>
-        <div class="usage"><b>怎麼用：</b>當你已經講完結論和理由，用一句結束語避免自己繼續補充。</div>
-        <p class="example-box"><b>例子：</b>所以我建議明天再執行。以上是我目前的建議。</p>
-        <label class="edit-label">我的版本</label>
-        <textarea class="editable-phrase" data-key="close">以上是我目前的建議。</textarea>
-      </section>
+<section class="phrase-card"><div class="phrase-tag">家人｜說明行程</div><h3>先讓家人知道安全與重點</h3><p><b>結構：</b>去哪裡 → 什麼時候 → 安全／聯絡方式</p><p class="example-box"><b>簡明版：</b>我這週會去釜山四天，主要是看智慧城市展。週六晚上回台灣，住宿和交通都已經安排好，到那邊我會再傳訊息。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="family-trip">我要去……，時間是……。主要是……。住宿／交通已經……，到時候我會……。</textarea></section>
 
-      <section class="card">
-        <h2>自己新增語句</h2>
-        <p>把你最近常遇到、卻不知道怎麼簡短說的情境記在這裡。</p>
-        <textarea id="custom-phrases" placeholder="例如：主管臨時問我為什麼延誤時，我可以怎麼說？"></textarea>
-        <div class="save-note" id="save-note">內容會自動儲存。</div>
-      </section>
-    </section>
-  </main>
+<section class="phrase-card"><div class="phrase-tag">陌生人｜詢問事情</div><h3>先說目的，再補必要資訊</h3><p><b>結構：</b>我要做什麼 → 缺什麼資訊</p><p class="example-box"><b>簡明版：</b>您好，我想辦理報到，請問需要準備哪些文件？我是今年秋季入學的國際學生。</p><p><b>English:</b> Hello, I would like to complete the registration. Could you tell me which documents I need? I am an international student entering this fall.</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="stranger-question">您好，我想……。請問……？我是……。</textarea></section>
 
-  <footer><p>Make your point clear faster.</p></footer>
-  <script src="app.js"></script>
+<section class="phrase-card"><div class="phrase-tag">任何對象｜說故事</div><h3>不要照時間順序全部講</h3><p><b>結構：</b>先講「這故事為什麼值得聽」→ 關鍵轉折 → 結果</p><p class="example-box"><b>簡明版：</b>我這次旅行最大的收穫不是景點，而是發現自己很喜歡智慧城市這類展覽。原本只是想去看看，結果現場讓我重新想到未來研究可以怎麼結合交通和科技。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="story">這件事最值得講的是……。原本……，後來……。最後我發現／學到……。</textarea></section>
+
+<section class="phrase-card"><div class="phrase-tag">工作回報</div><h3>先講目前狀況</h3><p><b>建議句：</b>目前進度正常，但有一個問題需要注意。</p><p><b>English:</b> The progress is on track, but there is one issue we need to watch.</p><div class="usage"><b>怎麼用：</b>主管問「現在進度如何？」時，先講狀況，再補原因。</div><p class="example-box"><b>例子：</b>目前進度正常，但供應商回覆比預期慢一天。我今天會再確認一次。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="work-update">目前進度正常，但有一個問題需要注意。主要原因是……下一步我會……</textarea></section>
+
+<section class="phrase-card"><div class="phrase-tag">表達建議</div><h3>先講建議，不先講背景</h3><p><b>建議句：</b>我的建議是先做 A，再做 B。</p><p><b>English:</b> My suggestion is to do A first, then B.</p><div class="usage"><b>怎麼用：</b>會議中被問意見時，先把你的主張講出來。</div><p class="example-box"><b>例子：</b>我的建議是先確認人力，再調整時程，因為目前最大的限制是人力。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="suggestion">我的建議是……因為……所以我建議接下來……</textarea></section>
+
+<section class="phrase-card"><div class="phrase-tag">不同意</div><h3>簡短表達不同意</h3><p><b>建議句：</b>我理解這個想法，但我不建議現在執行。</p><p><b>English:</b> I understand the idea, but I do not recommend doing it now.</p><div class="usage"><b>怎麼用：</b>不要先講一大段道歉或鋪陳，先說你同不同意，再解釋一個核心理由。</div><p class="example-box"><b>例子：</b>我理解這個想法，但我不建議現在執行，因為目前資料還不完整。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="disagree">我理解……，但我不建議……，因為……</textarea></section>
+
+<section class="phrase-card"><div class="phrase-tag">需要時間</div><h3>還不知道答案時</h3><p><b>建議句：</b>我現在還不能確認，我會先查清楚再回覆。</p><p><b>English:</b> I cannot confirm it yet. I will check and get back to you.</p><div class="usage"><b>怎麼用：</b>比起邊想邊講很多不確定資訊，直接說現在不知道，再講下一步。</div><p class="example-box"><b>例子：</b>我現在還不能確認這個數字。我下午三點前查清楚再回覆。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="need-time">我現在還不能確認……，我會在……前查清楚再回覆。</textarea></section>
+
+<section class="phrase-card"><div class="phrase-tag">請對方說重點</div><h3>資訊太多時</h3><p><b>建議句：</b>我先確認一下，現在最重要的問題是什麼？</p><p><b>English:</b> Let me confirm: what is the main issue right now?</p><div class="usage"><b>怎麼用：</b>對方講很多資訊時，主動把討論拉回主題。</div><p class="example-box"><b>例子：</b>我先確認一下，現在最重要的是人力不足，還是時程延誤？</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="clarify">我先確認一下，現在最重要的問題是……？</textarea></section>
+
+<section class="phrase-card"><div class="phrase-tag">結束發言</div><h3>講完就停</h3><p><b>建議句：</b>以上是我目前的建議。</p><p><b>English:</b> That is my recommendation for now.</p><div class="usage"><b>怎麼用：</b>當你已經講完結論和理由，用一句結束語避免自己繼續補充。</div><p class="example-box"><b>例子：</b>所以我建議明天再執行。以上是我目前的建議。</p><label class="edit-label">我的版本</label><textarea class="editable-phrase" data-key="close">以上是我目前的建議。</textarea></section>
+
+<section class="card"><h2>自己新增語句</h2><p>把你最近常遇到、卻不知道怎麼簡短說的情境記在這裡。</p><textarea id="custom-phrases" placeholder="例如：主管臨時問我為什麼延誤時，我可以怎麼說？"></textarea><div class="save-note" id="save-note">內容會自動儲存。</div></section>
+</section>
+</main>
+<footer><p>Make your point clear faster.</p></footer>
+<script src="app.js"></script>
 </body>
 </html>
