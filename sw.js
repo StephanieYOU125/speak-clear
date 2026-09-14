@@ -1,4 +1,4 @@
-const CACHE = "speak-clear-v6";
+const CACHE = "speak-clear-v7";
 const ASSETS = ["./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", event => {
