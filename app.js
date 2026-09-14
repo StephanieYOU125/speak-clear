@@ -18,19 +18,19 @@ const prompts = {
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 
-function activateTab(lang) {
-  tabButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === lang));
-  tabPanels.forEach(panel => panel.classList.toggle('active', panel.id === `tab-${lang}`));
-  localStorage.setItem('speakClearLanguage', lang);
-  document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+function activateTab(tab) {
+  tabButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tab));
+  tabPanels.forEach(panel => panel.classList.toggle('active', panel.id === `tab-${tab}`));
+  localStorage.setItem('speakClearTab', tab);
+  document.documentElement.lang = tab === 'en' ? 'en' : 'zh-Hant';
 }
 
 tabButtons.forEach(btn => {
   btn.addEventListener('click', () => activateTab(btn.dataset.tab));
 });
 
-const savedLanguage = localStorage.getItem('speakClearLanguage') || 'zh';
-activateTab(savedLanguage);
+const savedTab = localStorage.getItem('speakClearTab') || 'zh';
+activateTab(savedTab);
 
 function setupPractice(lang) {
   const promptEl = document.getElementById(`prompt-${lang}`);
@@ -65,6 +65,29 @@ function setupPractice(lang) {
 
 setupPractice('zh');
 setupPractice('en');
+
+document.querySelectorAll('.editable-phrase').forEach(area => {
+  const key = `speakClearPhrase-${area.dataset.key}`;
+  const saved = localStorage.getItem(key);
+  if (saved !== null) area.value = saved;
+  area.addEventListener('input', () => localStorage.setItem(key, area.value));
+});
+
+const customPhrases = document.getElementById('custom-phrases');
+if (customPhrases) {
+  const customKey = 'speakClearCustomPhrases';
+  const saved = localStorage.getItem(customKey);
+  if (saved !== null) customPhrases.value = saved;
+  customPhrases.addEventListener('input', () => {
+    localStorage.setItem(customKey, customPhrases.value);
+    const note = document.getElementById('save-note');
+    if (note) {
+      note.textContent = '已自動儲存';
+      clearTimeout(window.speakClearSaveTimer);
+      window.speakClearSaveTimer = setTimeout(() => note.textContent = '內容會自動儲存。', 1200);
+    }
+  });
+}
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js');
