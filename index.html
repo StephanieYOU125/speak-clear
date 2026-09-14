@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="簡明說話" />
+  <title>簡明說話｜Speak Clear</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="badge">Speak Clear</div>
+    <h1>講話變簡明</h1>
+    <p>先講結論，再講理由，最後才補細節。</p>
+    <button id="todayBtn" class="primary">開始 60 秒練習</button>
+  </header>
+
+  <main>
+    <section class="card accent">
+      <h2>唯一先記這個</h2>
+      <div class="formula">結論 → 理由 → 例子</div>
+      <p class="example">
+        不要說：「因為昨天那個案子後來有一些狀況，然後我有再確認……」<br><br>
+        改成：「<strong>我建議先延後。</strong> 因為目前資料還沒確認完整。昨天檢查時發現兩個數字不一致。」
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>我的 5 秒發言框架</h2>
+      <div class="steps">
+        <div><span>1</span><b>我要說什麼？</b><small>先用一句話講結論。</small></div>
+        <div><span>2</span><b>為什麼？</b><small>最多給 1–2 個理由。</small></div>
+        <div><span>3</span><b>對方要做什麼？</b><small>有行動就直接說。</small></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>刪掉這 4 種話</h2>
+      <ul class="checklist">
+        <li>重複同一件事，但換句話再說一次</li>
+        <li>還沒講結論，就先交代太多背景</li>
+        <li>與決策無關的細節</li>
+        <li>「就是、然後、那個、其實、可能」過多</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>三種常用模板</h2>
+      <details open>
+        <summary>工作回報</summary>
+        <p><b>結論：</b>目前進度正常／有一個問題。<br>
+        <b>原因：</b>主要是……<br>
+        <b>下一步：</b>我會在……前完成。</p>
+      </details>
+      <details>
+        <summary>表達意見</summary>
+        <p><b>我的建議是：</b>……<br>
+        <b>因為：</b>第一……第二……<br>
+        <b>所以：</b>我建議接下來……</p>
+      </details>
+      <details>
+        <summary>回答問題</summary>
+        <p><b>先回答：</b>是／不是／我建議……<br>
+        <b>再補充：</b>主要有兩個原因……<br>
+        <b>例子：</b>例如……</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>60 秒練習</h2>
+      <p id="prompt">題目：今天你最重要的一件事是什麼？</p>
+      <textarea id="practice" placeholder="先寫一句結論，再寫兩句理由。"></textarea>
+      <div class="counter"><span id="charCount">0</span> 字</div>
+      <div class="actions">
+        <button id="newPrompt">換題目</button>
+        <button id="clearBtn">清空</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>發言前檢核</h2>
+      <label><input type="checkbox"> 第一秒就聽得到我的結論</label>
+      <label><input type="checkbox"> 理由不超過 2 個</label>
+      <label><input type="checkbox"> 沒有無關背景</label>
+      <label><input type="checkbox"> 能在 30 秒內說完</label>
+      <label><input type="checkbox"> 對方知道下一步是什麼</label>
+    </section>
+
+    <section class="card">
+      <h2>一個很實用的規則</h2>
+      <p class="bigline">先說 70%，停下來。</p>
+      <p>如果對方想知道更多，他會問。不要一次把所有資訊倒完。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>目標不是「講得少」，而是「讓對方更快抓到重點」。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

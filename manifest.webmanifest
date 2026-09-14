@@ -1,0 +1,17 @@
+{
+  "name": "簡明說話｜Speak Clear",
+  "short_name": "簡明說話",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "description": "練習先講結論、再講理由、最後舉例的簡明表達指南。",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
